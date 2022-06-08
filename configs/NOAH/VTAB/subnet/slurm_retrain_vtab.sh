@@ -33,7 +33,7 @@ do
             --cpus-per-task=${CPUS_PER_TASK} \
             --kill-on-bad-exit=1 \
             ${SRUN_ARGS} \
-            python supernet_train_prompt.py --data-path=./data/vtab-1k/${DATASET} --data-set=${DATASET} --cfg=experiments/NOAH/subnet/ViT-B_prompt_${DATASET}.yaml --resume=${CKPT} --output_dir=saves/${DATASET}_supernet_lr-0.0005_wd-0.0001/retrain_${LR}_wd-${WEIGHT_DECAY}  --batch-size=64 --mode=retrain --epochs=100 --lr=${LR} --weight-decay=${WEIGHT_DECAY} --no_aug --direct_resize --mixup=0 --cutmix=0 --smoothing=0 --launcher="slurm"\
+            python supernet_train_prompt.py --data-path=./data/vtab-1k/${DATASET} --data-set=${DATASET} --cfg=experiments/NOAH/subnet/VTAB/ViT-B_prompt_${DATASET}.yaml --resume=${CKPT} --output_dir=saves/${DATASET}_supernet_lr-0.0005_wd-0.0001/retrain_${LR}_wd-${WEIGHT_DECAY}  --batch-size=64 --mode=retrain --epochs=100 --lr=${LR} --weight-decay=${WEIGHT_DECAY} --no_aug --direct_resize --mixup=0 --cutmix=0 --smoothing=0 --launcher="slurm"\
             2>&1 | tee -a logs/${currenttime}-${DATASET}-${LR}-vtab-rt.log > /dev/null & 
             echo -e "\033[32m[ Please check log: \"logs/${currenttime}-${DATASET}-${LR}-vtab-rt.log\" for details. ]\033[0m"
     done

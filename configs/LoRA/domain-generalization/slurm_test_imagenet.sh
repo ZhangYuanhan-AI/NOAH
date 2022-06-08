@@ -6,7 +6,7 @@ currenttime=`date "+%Y%m%d_%H%M%S"`
 
 PARTITION='dsta'
 JOB_NAME=test
-CONFIG=$1
+CONFIG=experiments/LoRA/ViT-B_prompt_lora_8.yaml
 GPUS=1
 INPUT_DIR=$2
 WEIGHT_DECAY=0.0001

@@ -6,9 +6,9 @@ currenttime=`date "+%Y%m%d_%H%M%S"`
 
 PARTITION='dsta'
 JOB_NAME=DG-TEST
-CONFIG=$1
+CONFIG=experiments/NOAH/subnet/few-shot/ViT-B_prompt_imagenet_shot16-seed0.yaml
 GPUS=1
-INPUT_DIR=$2
+INPUT_DIR=$1
 WEIGHT_DECAY=0.0001
 
 GPUS_PER_NODE=1

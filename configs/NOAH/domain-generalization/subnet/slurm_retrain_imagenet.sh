@@ -35,7 +35,7 @@ do
                     --cpus-per-task=${CPUS_PER_TASK} \
                     --kill-on-bad-exit=1 \
                     ${SRUN_ARGS} \
-                    python supernet_train_prompt.py --data-path=./data/${DATASET} --data-set=${DATASET}-FS --cfg=experiments/NOAH/subnet/ViT-B_prompt_${DATASET}_shot${SHOT}-seed0.yaml --resume=${CKPT} --output_dir=saves/few-shot_${DATASET}_shot-${SHOT}_seed-0_lr-0.0005_wd-0.0001/retrain_lr-${LR}-seed-${SEED} --batch-size=64 --mode=retrain --epochs=100 --lr=${LR} --weight-decay=${WEIGHT_DECAY} --few-shot-seed=0 --few-shot-shot=${SHOT} --few-shot-seed=${SEED} --launcher="slurm"\
+                    python supernet_train_prompt.py --data-path=./data/${DATASET} --data-set=${DATASET}-FS --cfg=experiments/NOAH/subnet/few-shot/ViT-B_prompt_${DATASET}_shot${SHOT}-seed0.yaml --resume=${CKPT} --output_dir=saves/few-shot_${DATASET}_shot-${SHOT}_seed-0_lr-0.0005_wd-0.0001/retrain_lr-${LR}-seed-${SEED} --batch-size=64 --mode=retrain --epochs=100 --lr=${LR} --weight-decay=${WEIGHT_DECAY} --few-shot-seed=0 --few-shot-shot=${SHOT} --few-shot-seed=${SEED} --launcher="slurm"\
                     2>&1 | tee -a logs/${currenttime}-${DATASET}-lr-${LR}-shot-${SHOT}-seed-${SEED}-dg-rt.log > /dev/null & 
                     echo -e "\033[32m[ Please check log: \"logs/${currenttime}-${DATASET}-lr-${LR}-shot-${SHOT}-seed-${SEED}-dg-rt.log\" for details. ]\033[0m"
             done

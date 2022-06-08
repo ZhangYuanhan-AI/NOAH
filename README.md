@@ -14,13 +14,13 @@ pip install -r requirements.txt
 
 ## Data Preparation
 
-### Visual Task Adaptation Benchmark (VTAB)
+### 1. Visual Task Adaptation Benchmark (VTAB)
 ```
 cd data/vtab-source
 python get_vtab1k.py
 ```
 
-### Few-Shot and Domain Generation
+### 2. Few-Shot and Domain Generation
 
 - Images
 
@@ -34,21 +34,21 @@ python get_vtab1k.py
 ## Quick Start For NOAH
 We use the VTAB experiments as examples.
 
-### Downloading the Pre-trained Model
+### 1. Downloading the Pre-trained Model
 | Model | Link |
 |-------|------|
 |ViT B/16 | [link](https://storage.googleapis.com/vit_models/imagenet21k/ViT-B_16.npz)|
 
-### Supernet Training
+### 2. Supernet Training
 ```
 sh configs/NOAH/VTAB/supernet/slurm_train_vtab.sh PATH-TO-YOUR-PRETRAINED-MODEL
 ```
 
-### Subnet Search
+### 3. Subnet Search
 ```
 sh configs/NOAH/VTAB/search/slurm_search_vtab.sh
 ```
-### Subnet Retraining
+### 4. Subnet Retraining
 ```
 sh configs/NOAH/VTAB/subnet/slurm_retrain_vtab.sh PATH-TO-YOUR-PRETRAINED-MODEL
 ```

@@ -6,9 +6,9 @@ currenttime=`date "+%Y%m%d_%H%M%S"`
 
 PARTITION='dsta'
 JOB_NAME=test
-CONFIG=$1
+CONFIG=experiments/Adapter/ViT-B_prompt_adapter_8.yaml
 GPUS=1
-INPUT_DIR=$2
+INPUT_DIR=$1
 WEIGHT_DECAY=0.0001
 
 GPUS_PER_NODE=1
