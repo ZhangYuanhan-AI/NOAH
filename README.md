@@ -3,7 +3,7 @@
 We propose to search, instead of hand-engineering, prompt modules for parameter-efficient transfer learning.
 
 ## Updatas
-[03/2022] [arXiv](https://github.com/Davidzhangyuanhan/NOAH) paper has been **released**.
+[05/2022] [arXiv](https://github.com/Davidzhangyuanhan/NOAH) paper has been **released**.
 
 ## Environment Setup
 ```
@@ -28,19 +28,27 @@ TBA
     Please refer to files under `data/XXX/XXX/annotations` for the detail information.
 
 
-## Quick Start
+## Quick Start For NOAH
+We use the VTAB experiments as examples.
+
 ### Downloading the Pre-trained Model
 | Model | Link |
 |-------|------|
 |ViT B/16 | [link](https://storage.googleapis.com/vit_models/imagenet21k/ViT-B_16.npz)|
 
 ### Supernet training
+```
+sh configs/NOAH/VTAB/supernet/slurm_train_vtab.sh PATH-TO-YOUR-PRETRAINED-MODEL
+```
 
 ### Subnet Search
-
+```
+sh configs/NOAH/VTAB/search/slurm_search_vtab.sh
+```
 ### Subnet Retraining
-
-### Subnet Evaluation
+```
+sh configs/NOAH/VTAB/subnet/slurm_retrain_vtab.sh PATH-TO-YOUR-PRETRAINED-MODEL
+```
 
 ## Citation
 If you use this code in your research, please kindly cite this work.
