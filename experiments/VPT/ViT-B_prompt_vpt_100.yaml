@@ -1,0 +1,86 @@
+MODEL_NAME: vit_base_patch16_224_in21k
+SUPERNET:
+  DEPTH: 12
+  VISUAL_PROMPT_DIM: 100
+  LORA_DIM: 0
+  ADAPTER_DIM: 0
+  PREFIX_DIM: 0
+  PROMPT_DEPTH: 12
+SEARCH_SPACE:
+  VISUAL_PROMPT_DIM:
+    - 10
+    - 50
+    - 100
+  LORA_DIM:
+    - 10
+    - 50
+    - 100
+  ADAPTER_DIM:
+    - 10
+    - 50
+    - 100
+  PREFIX_DIM:
+    - 10
+    - 50
+    - 100
+  PREFIX_DEPTH:
+    - 3
+    - 6
+    - 9
+    - 12
+  VISUAL_PROMPT_DEPTH:
+    - 3
+    - 6
+    - 9
+    - 12
+  LORA_DEPTH:
+    - 3
+    - 6
+    - 9
+    - 12
+  ADAPTER_DEPTH:
+    - 3
+    - 6
+    - 9
+    - 12
+RETRAIN:
+  VISUAL_PROMPT_DIM: 
+    - 100
+    - 100
+    - 100
+    - 100
+    - 100
+    - 100
+    - 100
+    - 100
+    - 100
+    - 100
+    - 100
+    - 100
+  LORA_DIM: 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+  ADAPTER_DIM: 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+

@@ -127,6 +127,10 @@ venv.bak/
 
 # work_dir
 work_dir
+saves
 
 #checkpoint
 weights
+
+#logs
+logs
