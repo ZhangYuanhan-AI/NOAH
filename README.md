@@ -54,5 +54,5 @@ If you use this code in your research, please kindly cite this work.
 ```
 
 ## Acknoledgments
-The codes are inspired by [CoOp](https://github.com/KaiyangZhou/CoOp) and [AutoFormer](https://github.com/microsoft/Cream/tree/main/AutoFormer).
+The codes are inspired by [CoOp](https://github.com/KaiyangZhou/CoOp), [AutoFormer](https://github.com/microsoft/Cream/tree/main/AutoFormer), [timm](https://github.com/rwightman/pytorch-image-models) and [mmcv](https://github.com/open-mmlab/mmcv).
 
