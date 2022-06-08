@@ -39,7 +39,7 @@ We use the VTAB experiments as examples.
 |-------|------|
 |ViT B/16 | [link](https://storage.googleapis.com/vit_models/imagenet21k/ViT-B_16.npz)|
 
-### Supernet training
+### Supernet Training
 ```
 sh configs/NOAH/VTAB/supernet/slurm_train_vtab.sh PATH-TO-YOUR-PRETRAINED-MODEL
 ```
