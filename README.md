@@ -20,7 +20,7 @@ cd data/vtab-source
 python get_vtab1k.py
 ```
 
-### Few-Shot Setting and Domain Generation Setting
+### Few-Shot and Domain Generation
 
 - Images
 
