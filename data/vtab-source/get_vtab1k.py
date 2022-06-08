@@ -46,7 +46,7 @@ import resource
 low, high = resource.getrlimit(resource.RLIMIT_NOFILE)
 resource.setrlimit(resource.RLIMIT_NOFILE, (high, high))
 
-data_root = osp.expanduser('data/vtab')
+data_root = osp.expanduser('../vtab-1k')
 
 for dataset_name, dataset_params in dataset_config:
     dataset_postfix = dataset_params.pop('dataset_postfix', None)
