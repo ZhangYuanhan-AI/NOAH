@@ -65,7 +65,7 @@ If you use this code in your research, please kindly cite this work.
 ```
 
 ## Acknoledgments
-The codes are inspired by [CoOp](https://github.com/KaiyangZhou/CoOp), [AutoFormer](https://github.com/microsoft/Cream/tree/main/AutoFormer), [timm](https://github.com/rwightman/pytorch-image-models) and [mmcv](https://github.com/open-mmlab/mmcv).
+Part of the code is borrowed from [CoOp](https://github.com/KaiyangZhou/CoOp), [AutoFormer](https://github.com/microsoft/Cream/tree/main/AutoFormer), [timm](https://github.com/rwightman/pytorch-image-models) and [mmcv](https://github.com/open-mmlab/mmcv).
 
 Thanks Zhou Cong (https://chongzhou96.github.io/) for the code of downloading the VTAB-1k.
 
