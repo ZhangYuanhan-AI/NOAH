@@ -359,16 +359,13 @@ def main(args):
     n_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print('number of params:', n_parameters)
 
-    # 使用线性lr
+    # linear lr
     # linear_scaled_lr =  args.lr * args.batch_size * utils.get_world_size() / 128.0
     # args.lr = linear_scaled_lr
-    # optimizer 可能有两组参数 如果weight-decay 不为0，一组是没有weight-decay的，一组是有的
-    ### $$$ 一定记得先确定好model 再放 optimizer!!!!!!
     optimizer = create_optimizer(args, model_without_ddp)
     loss_scaler = NativeScaler()
     lr_scheduler, _ = create_scheduler(args, optimizer)
 
-    # criterion = LabelSmoothingCrossEntropy()
 
     if args.mixup > 0.:
         # smoothing is handled with mixup label transform
@@ -423,7 +420,6 @@ def main(args):
                     'optimizer': optimizer.state_dict(),
                     'lr_scheduler': lr_scheduler.state_dict(),
                     'epoch': epoch,
-                    # 'model_ema': get_state_dict(model_ema),
                     'scaler': loss_scaler.state_dict(),
                     'args': args,
                 }, checkpoint_path)

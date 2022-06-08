@@ -13,11 +13,6 @@ import time
 def sample_configs(choices, is_visual_prompt_tuning=False,is_adapter=False,is_LoRA=False,is_prefix=False):
 
     config = {}
-    # dimensions = ['visual_prompt_dim','lora_dim','adapter_dim','predix_dim','visual_prompt_depth','lora_depth','adapter_depth','prefix_depth']
-    # visual_prompt_depth = random.choice(choices['visual_prompt_depth'])
-    # lora_depth = random.choice(choices['lora_depth'])
-    # adapter_depth = random.choice(choices['adapter_depth'])
-    # prefix_depth = random.choice(choices['prefix_depth'])
     depth = choices['depth']
 
     if is_visual_prompt_tuning == False and is_adapter == False and is_LoRA == False and is_prefix==False:
@@ -51,12 +46,6 @@ def sample_configs(choices, is_visual_prompt_tuning=False,is_adapter=False,is_Lo
         else:
             config['prefix_dim'] = [0] * (depth)
         
-
-
-    # config['visual_prompt_depth'] = visual_prompt_depth
-    # config['lora_depth'] = lora_depth
-    # config['adapter_depth'] = adapter_depth
-    # config['prefix_depth'] = prefix_depth
     return config
 
 def train_one_epoch(model: torch.nn.Module, criterion: torch.nn.Module,
