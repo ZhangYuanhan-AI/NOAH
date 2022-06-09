@@ -19,7 +19,7 @@ SRUN_ARGS=${SRUN_ARGS:-""}
 mkdir -p logs
 PYTHONPATH="$(dirname $0)/..":$PYTHONPATH \
 
-for LR in 0.005 #0.005 0.001 #0.0005 #0.01 0.5 #0.0001 0.001 0.005
+for LR in 0.001
 do
     for DATASET in cifar100 caltech101 dtd oxford_flowers102 svhn sun397 oxford_pet patch_camelyon eurosat resisc45 diabetic_retinopathy clevr_count clevr_dist dmlab kitti dsprites_loc dsprites_ori smallnorb_azi smallnorb_ele
     do 
