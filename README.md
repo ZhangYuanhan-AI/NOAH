@@ -5,7 +5,7 @@
 <div>
     <a href='https://davidzhangyuanhan.github.io/' target='_blank'>Yuanhan Zhang</a>&emsp;
     <a href='https://kaiyangzhou.github.io/' target='_blank'>Kaiyang Zhou</a>&emsp;
-    <a href='https://liuziwei7.github.io/' target='_blank'>Ziwei Liu<sup>*</sup></a>
+    <a href='https://liuziwei7.github.io/' target='_blank'>Ziwei Liu</a>
 </div>
 <div>
     S-Lab, Nanyang Technological University
@@ -73,7 +73,7 @@ sh configs/NOAH/VTAB/supernet/slurm_train_vtab.sh PATH-TO-YOUR-PRETRAINED-MODEL
 
 ### 3. Subnet Search
 ```
-sh configs/NOAH/VTAB/search/slurm_search_vtab.sh
+sh configs/NOAH/VTAB/search/slurm_search_vtab.sh PARAMETERS-LIMITES
 ```
 ### 4. Subnet Retraining
 ```

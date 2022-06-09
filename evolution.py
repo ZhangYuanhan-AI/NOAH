@@ -130,7 +130,6 @@ class EvolutionSearcher(object):
         self.keep_top_k[k] = t[:k]
 
     def stack_random_cand(self, random_func, *, batchsize=10):
-        # 因为有 while True的存在, 所以 这个batchsize的大小不影响最后sample的candidate的数量
         while True:
             cands = [random_func() for _ in range(batchsize)]
             for cand in cands:
@@ -143,7 +142,6 @@ class EvolutionSearcher(object):
     def get_random_cand(self):
 
         cand_tuple = list()
-        #既有mlp的ratio 也有 heads的ratio num == 13*2
         dimensions = ['visual_prompt_dim','lora_dim','adapter_dim','visual_prompt_depth','lora_depth','adapter_depth']
         depth = self.choices['depth']
         visual_prompt_depth = random.choice(self.choices['visual_prompt_depth'])
@@ -261,7 +259,6 @@ class EvolutionSearcher(object):
         max_iters = 10 * crossover_num
 
         def random_func():
-            # import pdb;pdb.set_trace()
             cand_1 = list(random.choice(self.keep_top_k[k]))
             cand_2 = list(random.choice(self.keep_top_k[k]))
             p1 = decode_cand_tuple(cand_1)
@@ -290,8 +287,6 @@ class EvolutionSearcher(object):
                 self.population_num, self.select_num, self.mutation_num, self.crossover_num,
                 self.population_num - self.mutation_num - self.crossover_num, self.max_epochs))
 
-        # self.load_checkpoint()
-        # import pdb;pdb.set_trace()
 
         self.get_random(self.population_num)
 
@@ -340,15 +335,14 @@ def get_args_parser():
     # evolution search parameters
     parser.add_argument('--max-epochs', type=int, default=20)
     parser.add_argument('--select-num', type=int, default=10)
-    parser.add_argument('--population-num', type=int, default=50)#随机sample的结构的数量
+    parser.add_argument('--population-num', type=int, default=50
     parser.add_argument('--m_prob', type=float, default=0.2)
     parser.add_argument('--s_prob', type=float, default=0.4)
     parser.add_argument('--crossover-num', type=int, default=25)
     parser.add_argument('--epochs', type=int, default=30)
     parser.add_argument('--mutation-num', type=int, default=25)
-    parser.add_argument('--param-limits', type=float, default=2) # sample 出来的模型的参数大小上界
-    parser.add_argument('--min-param-limits', type=float, default=0)#default=18) # sample 出来的模型的参数大小下界
-
+    parser.add_argument('--param-limits', type=float, default=0.64) 
+    parser.add_argument('--min-param-limits', type=float, default=0)#default=18) 
     # config file
     parser.add_argument('--cfg',help='experiment configure file name',required=True,type=str)
 
@@ -529,7 +523,6 @@ def get_args_parser():
     return parser
 
 def main(args):
-    # import pdb;pdb.set_trace()
     update_config_from_file(args.cfg)
 
     if args.launcher == 'none':
@@ -539,8 +532,6 @@ def main(args):
         init_dist(launcher=args.launcher)
         args.rank = int(os.environ['SLURM_PROCID'])
         args.gpu = args.rank % torch.cuda.device_count()
-
-    # utils.init_distributed_mode(args)
 
     device = torch.device(args.device)
 

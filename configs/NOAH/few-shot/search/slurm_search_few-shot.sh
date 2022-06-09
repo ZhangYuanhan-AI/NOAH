@@ -8,7 +8,7 @@ PARTITION='dsta'
 JOB_NAME=FS-SEARCH
 CONFIG=./experiments/NOAH/supernet/supernet-B_prompt.yaml
 GPUS=1
-LIMITS=0.64
+LIMITS=$1
 
 GPUS_PER_NODE=1
 CPUS_PER_TASK=5
