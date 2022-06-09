@@ -15,9 +15,8 @@
 <img src="figures/motivation.png">
 
 
-We propose to search, instead of hand-engineering, prompt modules for parameter-efficient transfer learning. \
-We name our method as **NOAH** (Neural prOmpt seArcH).
-
+    
+The idea is simple: we view existing parameter-efficient tuning modules, including [Adapter](), [LoRA]() and [VPT](), as prompt modules and propose to search the optimal configuration via neural architecture search. Our approach is named **NOAH** (Neural prOmpt seArcH).
 
 ---
 
