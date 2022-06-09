@@ -18,10 +18,11 @@
 We propose to search, instead of hand-engineering, prompt modules for parameter-efficient transfer learning. \
 We name our method as **NOAH** (Neural prOmpt seArcH).
 
+
 ---
 
 <p align="center">
-  <a href="https://github.com/Davidzhangyuanhan/NOAH" target='_blank'>arXiv</a>
+  <a href="https://github.com/Davidzhangyuanhan/NOAH" target='_blank'>[arXiv]</a>
 </p>
 
 </div>
