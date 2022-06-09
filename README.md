@@ -1,6 +1,32 @@
-# Neural Prompt Search
-![fig1](figures/motivation.png)
-We propose to search, instead of hand-engineering, prompt modules for parameter-efficient transfer learning.
+<div align="center">
+
+<h1>Neural Prompt Search</h1>
+
+<div>
+    <a href='https://davidzhangyuanhan.github.io/' target='_blank'>Yuanhan Zhang</a>&emsp;
+    <a href='https://kaiyangzhou.github.io/' target='_blank'>Kaiyang Zhou</a>&emsp;
+    <a href='https://liuziwei7.github.io/' target='_blank'>Ziwei Liu<sup>*</sup></a>
+</div>
+<div>
+    S-Lab, Nanyang Technological University
+</div>
+
+
+<img src="figures/motivation.png">
+
+
+We propose to search, instead of hand-engineering, prompt modules for parameter-efficient transfer learning. \
+We name our method as **NOAH** (Neural prOmpt seArcH).
+
+---
+
+<p align="center">
+  <a href="https://github.com/Davidzhangyuanhan/NOAH" target='_blank'>arXiv</a>
+</p>
+
+</div>
+
+
 
 ## Updatas
 [05/2022] [arXiv](https://github.com/Davidzhangyuanhan/NOAH) paper has been **released**.
