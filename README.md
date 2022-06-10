@@ -21,7 +21,7 @@ The idea is simple: we view existing parameter-efficient tuning modules, includi
 ---
 
 <p align="center">
-  <a href="https://github.com/Davidzhangyuanhan/NOAH" target='_blank'>[arXiv]</a>
+  <a href="https://arxiv.org/abs/2206.04673" target='_blank'>[arXiv]</a>
 </p>
 
 </div>
@@ -29,7 +29,7 @@ The idea is simple: we view existing parameter-efficient tuning modules, includi
 
 
 ## Updatas
-[05/2022] [arXiv](https://github.com/Davidzhangyuanhan/NOAH) paper has been **released**.
+[05/2022] [arXiv](https://arxiv.org/abs/2206.04673) paper has been **released**.
 
 ## Environment Setup
 ```
