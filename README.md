@@ -79,6 +79,9 @@ sh configs/NOAH/VTAB/search/slurm_search_vtab.sh PARAMETERS-LIMITES
 sh configs/NOAH/VTAB/subnet/slurm_retrain_vtab.sh PATH-TO-YOUR-PRETRAINED-MODEL
 ```
 
+### 5. Performance
+![fig1](figures/table1.jpg)
+
 ## Citation
 If you use this code in your research, please kindly cite this work.
 ```
