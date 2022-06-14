@@ -15,7 +15,8 @@
 <img src="figures/motivation.png">
 
 
-    
+<h3>TL;DR</h3>
+
 The idea is simple: we view existing parameter-efficient tuning modules, including [Adapter](https://arxiv.org/abs/1902.00751), [LoRA](https://arxiv.org/abs/2106.09685) and [VPT](https://arxiv.org/abs/2203.12119), as prompt modules and propose to search the optimal configuration via neural architecture search. Our approach is named **NOAH** (Neural prOmpt seArcH).
 
 ---
@@ -78,7 +79,7 @@ sh configs/NOAH/VTAB/search/slurm_search_vtab.sh PARAMETERS-LIMITES
 ```
 sh configs/NOAH/VTAB/subnet/slurm_retrain_vtab.sh PATH-TO-YOUR-PRETRAINED-MODEL
 ```
-We add the optimal subnet architecture of each dataset in the ``experiments/NOAH/subnet/VTAB``.
+We add the optimal subnet architecture of each dataset in the ``experiments/NOAH/subnet/VTAB``.  
 
 ### 5. Performance
 ![fig1](figures/table1.jpg)
