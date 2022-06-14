@@ -78,6 +78,7 @@ sh configs/NOAH/VTAB/search/slurm_search_vtab.sh PARAMETERS-LIMITES
 ```
 sh configs/NOAH/VTAB/subnet/slurm_retrain_vtab.sh PATH-TO-YOUR-PRETRAINED-MODEL
 ```
+We add the optimal subnet of each dataset in the ``experiments/NOAH/subnet/VTAB``
 
 ### 5. Performance
 ![fig1](figures/table1.jpg)
