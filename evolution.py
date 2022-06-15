@@ -212,9 +212,9 @@ class EvolutionSearcher(object):
                     new_depth = cur_depth
 
                 if new_depth > cur_depth:
-                    lora_dim = visual_prompt_dim[:cur_depth] + [random.choice(self.choices['lora_dim']) for _ in range(new_depth - cur_depth)] + [0]*(depth-new_depth)
+                    lora_dim = lora_dim[:cur_depth] + [random.choice(self.choices['lora_dim']) for _ in range(new_depth - cur_depth)] + [0]*(depth-new_depth)
                 else:
-                    lora_dim = visual_prompt_dim[:new_depth] + [0] * (depth - new_depth)
+                    lora_dim = lora_dim[:new_depth] + [0] * (depth - new_depth)
 
             # adapter_dim
             random_s = random.random()
