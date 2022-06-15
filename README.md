@@ -3,9 +3,9 @@
 <h1>Neural Prompt Search</h1>
 
 <div>
-    <a href='https://davidzhangyuanhan.github.io/' target='_blank'>Yuanhan Zhang</a>&emsp;
-    <a href='https://kaiyangzhou.github.io/' target='_blank'>Kaiyang Zhou</a>&emsp;
-    <a href='https://liuziwei7.github.io/' target='_blank'>Ziwei Liu</a>
+    <a href='https://davidzhangyuanhan.github.io/' target='_blank'>Zhang Yuanhan</a>&emsp;
+    <a href='https://kaiyangzhou.github.io/' target='_blank'>Zhou Kaiyang</a>&emsp;
+    <a href='https://liuziwei7.github.io/' target='_blank'>Liu Ziwei</a>
 </div>
 <div>
     S-Lab, Nanyang Technological University
