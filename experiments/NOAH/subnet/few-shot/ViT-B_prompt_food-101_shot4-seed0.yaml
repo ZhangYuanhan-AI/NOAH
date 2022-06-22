@@ -8,26 +8,24 @@ SUPERNET:
   PROMPT_DEPTH: 12
 SEARCH_SPACE:
   VISUAL_PROMPT_DIM:
+    - 5
     - 10
     - 50
     - 100
   LORA_DIM:
+    - 5
     - 10
     - 50
     - 100
   ADAPTER_DIM:
+    - 5
     - 10
     - 50
     - 100
   PREFIX_DIM:
-    - 10
-    - 50
-    - 100
+    - 0
   PREFIX_DEPTH:
-    - 3
-    - 6
-    - 9
-    - 12
+    - 0
   VISUAL_PROMPT_DEPTH:
     - 3
     - 6
