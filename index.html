@@ -6,18 +6,18 @@
 
 <html lang="en">
 <head>
-  	<title>OmniBenchmark</title>
+  	<title>NOAH</title>
       <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/
           if you update and want to force Facebook to re-scrape. -->
-  	<meta property="og:image" content="./resources/teaser-min.png"/>
-  	<meta property="og:title" content="Benchmarking Omni-Vision Representation through the Lens of Visual Realms." />
-  	<meta property="og:description" content="A new computer vision benchmark and a new super contrastive learning framework." />
+  	<meta property="og:image" content="./resources/teaser.png"/>
+  	<meta property="og:title" content="Neural Prompt Search." />
+  	<meta property="og:description" content="Searching prompt modules for parameter-efficient transfer learning.." />
     <!-- Twitter automatically scrapes this. Go to https://cards-dev.twitter.com/validator?
         if you update and want to force Twitter to re-scrape. -->
     <meta property="twitter:card"          content="summary" />
-    <meta property="twitter:title"         content="Benchmarking Omni-Vision Representation through the Lens of Visual Realms." />
-    <meta property="twitter:description"   content="A new computer vision benchmark and a new super contrastive learning framework." />
-    <meta property="twitter:image"         content="./resources/teaser-min.png" />
+    <meta property="twitter:title"         content="Neural Prompt Search." />
+    <meta property="twitter:description"   content="Searching prompt modules for parameter-efficient transfer learning.." />
+    <meta property="twitter:image"         content="./resources/teaser.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Add your Google Analytics tag here -->
@@ -37,8 +37,7 @@
 <body>
 <div class="container">
     <div class="title">
-        Benchmarking Omni-Vision Representation   <br> 
-        through the Lens of Visual Realms
+        Neural Prompt Search
     </div>
 
     <!-- <div class="venue">
@@ -52,14 +51,10 @@
     </div>
 
     <div class="author">
-        <a href="https://scholar.google.com.hk/citations?user=ngPR1dIAAAAJ&hl=zh-CN">Zhenfei Yin</a><sup>2</sup>
+        <a href="https://kaiyangzhou.github.io/">Kaiyang Zhou</a><sup>1</sup>
     </div>
 
-    <br>
 
-    <div class="author">
-        <a href="https://scholar.google.com.hk/citations?user=VU5ObUwAAAAJ&hl=zh-CN">Jing Shao</a><sup>2</sup>
-    </div>
     <div class="author">
         <a href="https://liuziwei7.github.io/">Ziwei liu</a><sup>1</sup>
     </div>
@@ -67,17 +62,16 @@
     <br><br>
 
     <div class="affiliation"><sup>1&nbsp;</sup>S-Lab, Nanyang Technological University</div>
-    <div class="affiliation"><sup>2&nbsp;</sup>SenseTime Reseach</div>
 
     <br><br>
 
-    <div class="links"><a href="">[Paper]</a></div>
+    <div class="links"><a href="https://arxiv.org/abs/2206.04673">[Paper]</a></div>
     <!-- <div class="links"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">[Video]</a></div> -->
-    <div class="links"><a href="https://github.com/Davidzhangyuanhan/OmniBenchmark">[Code]</a></div>
+    <div class="links"><a href="https://github.com/Davidzhangyuanhan/NOAH">[Code]</a></div>
 
     <br><br>
 
-    <img style="width: 80%;" src="./resources/teaser-min.png" alt="Teaser figure."/>
+    <img style="width: 80%;" src="./resources/teaser.png" alt="Teaser figure."/>
     <!-- <br>
     <p style="width: 80%;">
         This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful project</a>, and inherits the modifications made by <a href="https://github.com/jasonyzhang/webpage-template">Jason Zhang</a>.
@@ -88,17 +82,10 @@
     <hr>
 
     <h1>TL;DR</h1>
-    <h2>New Benchmark</h2>
     <p style="width: 80%;">
-        Omni-Realm Benchmark (OmniBenchmark) is a <strong>diverse</strong> (21 semantic realm-wise datasets) and <strong>concise</strong> (realm-wise datasets have no concepts overlapping) benchmark for evaluating pre-trained model generalization across semantic super-concepts/realms, e.g. across mammals to aircrafts.
+        The idea is simple: we view existing parameter-efficient tuning modules, including <a href="https://arxiv.org/abs/1902.00751">Adapter</a>, <a href="https://arxiv.org/abs/2106.09685">LoRA</a> and <a href="https://arxiv.org/abs/2203.12119">VPT</a>, as prompt modules and propose to search the optimal configuration via neural architecture search. Our approach is named NOAH (Neural prOmpt seArcH).
     </p>
-    <img style="width: 80%;" src="./resources/Omnibenchmark_annimation.gif" alt="omnibenchmark annimation."/>
-    <br><br>
-    <h2>New Supervised Contrastive Learning Framework</h2>
-    <p style="width: 80%;">
-        We introduces a new supervised contrastive learning framework, namely Relational Contrastive (ReCo) learning, that aims to be better suited for omni-vision representation.
-    </p>
-    <img style="width: 80%;" src="./resources/ReCo_annimation.gif" alt="reCo annimation."/>
+    <img style="width: 80%;" src="./resources/NOAH_annimation.gif" alt="NOAH annimation."/>
 
     <br><br>
     <hr>
@@ -106,13 +93,15 @@
 
     <h1>Abstract</h1>
     <p style="width: 80%;">
-        Though impressive performance has been achieved in specific visual realms (\eg faces, dogs, and places), an omni-vision representation generalizing to many natural visual domains is highly desirable.
-        But, existing benchmarks are biased and inefficient to evaluate the omni-vision representation: either they can only evaluate specific realms, or they cover more realms at the expense of including more datasets that have concepts overlapping, resulting in repetitively evaluating several realms.
-        In this paper, we propose Omni-Realm Benchmark (<strong>OmniBenchmark</strong>). It includes 21 realm-wise datasets with 7,372 concepts and 1,074,346 images. These realm-wise datasets cover most visual realms in the world and have no concept overlapping. 
-        With OmniBenchmark, we diagnose the advances in omni-vision representation studies in architectures (from CNNs to transformers) and in learning paradigms (from supervised learning to self-supervised learning).
-        We reveal multiple practical observations to facilitate future research.
-        Beyond that, we propose a new supervised contrastive learning framework, namely <strong>Re</strong>lational <strong>Co</strong>ntrastive learning (<strong>ReCo</strong>), for a better omni-vision representation.
-        ReCo pulls two classes belonging to the same visual realm closer instead of pushing them apart, learning the semantic relation between classes. Consequently, ReCo achieves superior performance on both ImageNet and OmniBenchmark.
+        The size of vision models has grown exponentially over the last few years, especially after the emergence of Vision Transformer. 
+        This has motivated the development of parameter-efficient tuning methods, such as learning adapter layers or visual prompt tokens, 
+        which allow a tiny portion of model parameters to be trained whereas the vast majority obtained from pre-training are frozen. 
+        However, designing a proper tuning method is non-trivial: one might need to try out a lengthy list of design choices, 
+        not to mention that each downstream dataset often requires custom designs. In this paper, we view the existing parameter-efficient tuning methods 
+        as ``prompt modules'' and propose <strong>Neural prOmpt seArcH (NOAH)</strong>, a novel approach that learns, 
+        for large vision models, the optimal design of prompt modules through a neural architecture search algorithm, 
+        specifically for each downstream dataset. By conducting extensive experiments on over 20 vision datasets, 
+        we demonstrate that NOAH (i) is superior to individual prompt modules, (ii) has good few-shot learning ability, and (iii) is domain-generalizable. 
     </p>
 
     <br><br>
@@ -147,18 +136,18 @@
     <h1>Paper</h1>
     <div class="paper-thumbnail">
         <a href="https://arxiv.org">
-            <img class="layered-paper-big" width="100%" src="./resources/paper.jpg" alt="Paper thumbnail"/>
+            <img class="layered-paper-big" width="100%" src="./resources/paper.png" alt="Paper thumbnail"/>
         </a>
     </div>
     <div class="paper-info">
-        <h3>Benchmarking Omni-Vision Representation through the Lens of Visual Realms</h3>
-        <p>Yuanhan Zhang, Zhenfei Yin, Jing Shao and Ziwei liu</p>
-        <p>In Conference, 20XX.</p>
-        <pre><code>@InProceedings{author20XXtitle,
-    title = {Creative and Descriptive Paper Title},
-    author = {Author, First and Author, Second and Author, Third and Author, Fourth and Author, Fifth},
-    booktitle = {Conference},
-    year = {20XX},
+        <h3>Neural Prompt Search</h3>
+        <p>Yuanhan Zhang, Kaiyang Zhou and Ziwei liu</p>
+        <p>arXiv, 2022.</p>
+        <pre><code>@InProceedings{zhang2022NOAH,
+    title = {Neural Prompt Search},
+    author = {Yuanhan Zhang and Kaiyang Zhou and Ziwei Liu},
+    archivePrefix={arXiv},
+    year = {2022},
 }</code></pre>
     </div>
 
