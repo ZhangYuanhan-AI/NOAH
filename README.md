@@ -1,107 +1,14 @@
-<div align="center">
+## Webpage Template
 
-<h1>Neural Prompt Search</h1>
+This template was originally made by [Phillip Isola](http://web.mit.edu/phillipi/) and [Richard Zhang](http://richzhang.github.io/) for a [colorful project](http://richzhang.github.io/colorization/), and inherits the modifications made by [Jason Zhang](https://github.com/jasonyzhang/webpage-template).
+See how the webpage looks [here](https://elliottwu.com/webpage-template/).
 
-<div>
-    <a href='https://davidzhangyuanhan.github.io/' target='_blank'>Zhang Yuanhan</a>&emsp;
-    <a href='https://kaiyangzhou.github.io/' target='_blank'>Zhou Kaiyang</a>&emsp;
-    <a href='https://liuziwei7.github.io/' target='_blank'>Liu Ziwei</a>
-</div>
-<div>
-    S-Lab, Nanyang Technological University
-</div>
-
-
-<img src="figures/motivation.png">
-
-<h3>TL;DR</h3>
-    
-The idea is simple: we view existing parameter-efficient tuning modules, including [Adapter](https://arxiv.org/abs/1902.00751), [LoRA](https://arxiv.org/abs/2106.09685) and [VPT](https://arxiv.org/abs/2203.12119), as prompt modules and propose to search the optimal configuration via neural architecture search. Our approach is named **NOAH** (Neural prOmpt seArcH).
-
----
-
-<p align="center">
-  <a href="https://arxiv.org/abs/2206.04673" target='_blank'>[arXiv]</a>
-</p>
-
-</div>
-
-
-
-## Updatas
-[05/2022] [arXiv](https://arxiv.org/abs/2206.04673) paper has been **released**.
-
-## Environment Setup
+To use this template, clone the repo:
 ```
-conda create -n NOAH python=3.8
-conda activate NOAH
-pip install -r requirements.txt
+git clone https://github.com/elliottwu/webpage-template
 ```
 
-## Data Preparation
+Copy the contents into a `gh-pages` branch of a GitHub repo. That will automatically
+make a webpage under address [GITHUB_USERNAME.github.io/REPO_NAME](GITHUB_USERNAME.github.io/REPO_NAME).
 
-### 1. Visual Task Adaptation Benchmark (VTAB)
-```
-cd data/vtab-source
-python get_vtab1k.py
-```
-
-### 2. Few-Shot and Domain Generation
-
-- Images
-
-    Please refer to [DATASETS.md](https://github.com/KaiyangZhou/CoOp/blob/main/DATASETS.md) to download the datasets.
-
-- Train/Val/Test splits
-
-    Please refer to files under `data/XXX/XXX/annotations` for the detail information.
-
-
-## Quick Start For NOAH
-We use the VTAB experiments as examples.
-
-### 1. Downloading the Pre-trained Model
-| Model | Link |
-|-------|------|
-|ViT B/16 | [link](https://storage.googleapis.com/vit_models/imagenet21k/ViT-B_16.npz)|
-
-### 2. Supernet Training
-```
-sh configs/NOAH/VTAB/supernet/slurm_train_vtab.sh PATH-TO-YOUR-PRETRAINED-MODEL
-```
-
-### 3. Subnet Search
-```
-sh configs/NOAH/VTAB/search/slurm_search_vtab.sh PARAMETERS-LIMITES
-```
-### 4. Subnet Retraining
-```
-sh configs/NOAH/VTAB/subnet/slurm_retrain_vtab.sh PATH-TO-YOUR-PRETRAINED-MODEL
-```
-We add the optimal subnet architecture of each dataset in the ``experiments/NOAH/subnet/VTAB``.
-
-### 5. Performance
-![fig1](figures/table1.jpg)
-
-## Citation
-If you use this code in your research, please kindly cite this work.
-```
-@inproceedings{zhang2022NOAH,
-      title={Neural Prompt Search}, 
-      author={Yuanhan Zhang and Kaiyang Zhou and Ziwei Liu},
-      year={2022},
-      archivePrefix={arXiv},
-}
-```
-
-## Acknoledgments
-Part of the code is borrowed from [CoOp](https://github.com/KaiyangZhou/CoOp), [AutoFormer](https://github.com/microsoft/Cream/tree/main/AutoFormer), [timm](https://github.com/rwightman/pytorch-image-models) and [mmcv](https://github.com/open-mmlab/mmcv).
-
-Thanks Zhou Chong (https://chongzhou96.github.io/) for the code of downloading the VTAB-1k.
-
-<div align="center">
-
-![visitors](https://visitor-badge.glitch.me/badge?page_id=Davidzhangyuanhan.NOAH&left_color=green&right_color=red)
-
-</div>
-
+Don't forget to update the Google Analytics script!
