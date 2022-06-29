@@ -3,9 +3,9 @@
 <h1>Neural Prompt Search</h1>
 
 <div>
-    <a href='https://davidzhangyuanhan.github.io/' target='_blank'>Zhang Yuanhan</a>&emsp;
-    <a href='https://kaiyangzhou.github.io/' target='_blank'>Zhou Kaiyang</a>&emsp;
-    <a href='https://liuziwei7.github.io/' target='_blank'>Liu Ziwei</a>
+    <a href='https://davidzhangyuanhan.github.io/' target='_blank'>uanhan Zhang</a>&emsp;
+    <a href='https://kaiyangzhou.github.io/' target='_blank'>Kaiyang Zhou</a>&emsp;
+    <a href='https://liuziwei7.github.io/' target='_blank'>Ziwei Liu</a>
 </div>
 <div>
     S-Lab, Nanyang Technological University
@@ -97,7 +97,7 @@ If you use this code in your research, please kindly cite this work.
 ## Acknoledgments
 Part of the code is borrowed from [CoOp](https://github.com/KaiyangZhou/CoOp), [AutoFormer](https://github.com/microsoft/Cream/tree/main/AutoFormer), [timm](https://github.com/rwightman/pytorch-image-models) and [mmcv](https://github.com/open-mmlab/mmcv).
 
-Thanks Zhou Chong (https://chongzhou96.github.io/) for the code of downloading the VTAB-1k.
+Thanks to Chong Zhou (https://chongzhou96.github.io/) for the code of downloading the VTAB-1k.
 
 <div align="center">
 
