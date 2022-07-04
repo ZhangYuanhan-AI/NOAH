@@ -3,7 +3,7 @@
 <h1>Neural Prompt Search</h1>
 
 <div>
-    <a href='https://davidzhangyuanhan.github.io/' target='_blank'>Yuanhan Zhang</a>&emsp;
+    <a href='https://zhangyuanhan-ai.github.io/' target='_blank'>Yuanhan Zhang</a>&emsp;
     <a href='https://kaiyangzhou.github.io/' target='_blank'>Kaiyang Zhou</a>&emsp;
     <a href='https://liuziwei7.github.io/' target='_blank'>Ziwei Liu</a>
 </div>
