@@ -89,12 +89,12 @@
     <p style="width: 80%;">
         The idea is simple: we view existing parameter-efficient tuning modules, including <a href="https://arxiv.org/abs/1902.00751">Adapter</a>, <a href="https://arxiv.org/abs/2106.09685">LoRA</a> and <a href="https://arxiv.org/abs/2203.12119">VPT</a>, as prompt modules and propose to search the optimal configuration via neural architecture search. Our approach is named NOAH (Neural prOmpt seArcH).
     </p>
-    <!-- <img style="width: 80%;" src="./resources/NOAH_annimation.gif" alt="NOAH annimation."/> -->
-    <div onmouseout="noah_stop()" onmouseover="noah_start()">
+    
+    <!-- <div onmouseout="noah_stop()" onmouseover="noah_start()">
         <!-- <td style="padding:20px;width:45%;vertical-align:middle"> -->
-        <div id="noah_anim" class="hidden" style="display: none;"><img src="./resources/NOAH_annimation.gif" style="width: 80%;"></div>
-        <div id="noah_still" style="display: inline;"><img src="./resources/teaser.png" style="width: 80%;"></div>
-        <script type="text/javascript">
+        <!-- <div id="noah_anim" class="hidden" style="display: none;"><img src="./resources/NOAH_annimation.gif" style="width: 80%;"></div> -->
+        <!-- <div id="noah_still" style="display: none;"><img src="./resources/teaser.png" style="width: 80%;"></div> -->
+        <!-- <script type="text/javascript">
             function noah_start() {
             document.getElementById('noah_anim').style.display = 'inline';
             document.getElementById('noah_still').style.display = 'none';
@@ -105,8 +105,16 @@
             document.getElementById('noah_still').style.display = 'inline';
             }
             noah_stop()
-        </script>
-    </div>
+        </script> -->
+    <!-- </div> --> 
+
+
+    <img id="gif-2" src="./resources/teaser.png" 
+        onmouseover="document.getElementById('gif-2').src='./resources/NOAH_annimation.gif' " 
+        onmouseout="document.getElementById('gif-2').src='./resources/teaser.png'" 
+        style="width: 80%;"
+
+    />
 
     <br><br>
     <hr>
