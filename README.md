@@ -21,7 +21,8 @@ The idea is simple: we view existing parameter-efficient tuning modules, includi
 ---
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2206.04673" target='_blank'>[arXiv]</a>
+  <a href="https://arxiv.org/abs/2206.04673" target='_blank'>[arXiv]</a> •
+  <a href="https://zhangyuanhan-ai.github.io/NOAH" target='_blank'>[project page]</a>
 </p>
 
 </div>
