@@ -87,11 +87,13 @@ We add the optimal subnet architecture of each dataset in the ``experiments/NOAH
 ## Citation
 If you use this code in your research, please kindly cite this work.
 ```
-@inproceedings{zhang2022NOAH,
+@misc{zhang2022neural,
       title={Neural Prompt Search}, 
       author={Yuanhan Zhang and Kaiyang Zhou and Ziwei Liu},
       year={2022},
+      eprint={2206.04673},
       archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 
