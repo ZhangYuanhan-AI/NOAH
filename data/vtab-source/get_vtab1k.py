@@ -68,7 +68,7 @@ for dataset_name, dataset_params in dataset_config:
         
         with open(f'{data_root}/{dataset_name}/{split_name}.txt', 'w') as f:
             for i, item in enumerate(data):
-                image_path = f'images/{split_name}/{i:06d}.jpg'
+                image_path = f'images/{split_name}/{i:06d}.png'
                 label = item['label'].numpy().item()
                 f.write(f'{image_path} {label}\n')
                 
